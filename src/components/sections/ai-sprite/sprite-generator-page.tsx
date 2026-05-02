@@ -137,7 +137,7 @@ function SpriteSheetMockup({ className }: { className?: string }) {
   return (
     <div
       className={cn(
-        'rounded-[2rem] border-2 border-[#241b15] bg-white p-4 shadow-[10px_10px_0_#d8cec0]',
+        'min-w-0 rounded-[2rem] border-2 border-[#241b15] bg-white p-4 shadow-[6px_6px_0_#d8cec0] sm:shadow-[10px_10px_0_#d8cec0]',
         className
       )}
     >
@@ -164,7 +164,7 @@ function SpriteSheetMockup({ className }: { className?: string }) {
 
 function EngineExportMockup() {
   return (
-    <div className="overflow-hidden rounded-[2rem] border-2 border-[#241b15] bg-white p-3 shadow-[12px_12px_0_#d8cec0]">
+    <div className="min-w-0 overflow-hidden rounded-[2rem] border-2 border-[#241b15] bg-white p-3 shadow-[6px_6px_0_#d8cec0] sm:shadow-[12px_12px_0_#d8cec0]">
       <img
         src={engineWorkflowShowcase}
         alt="Generated sprite sheet to engine preview workflow"
@@ -221,7 +221,7 @@ function ResultPanel({
       : 'Queued for generation';
 
   return (
-    <div className="flex h-full flex-col rounded-[1.75rem] border-2 border-[#241b15] bg-white p-4 shadow-[10px_10px_0_#d8cec0]">
+    <div className="flex h-full min-w-0 flex-col rounded-[1.75rem] border-2 border-[#241b15] bg-white p-4 shadow-[6px_6px_0_#d8cec0] sm:shadow-[10px_10px_0_#d8cec0]">
       <div className="mb-3 flex items-center justify-between gap-3">
         <div>
           <p className="text-xs font-black uppercase tracking-[0.18em] text-[#8a7e70]">
@@ -467,7 +467,7 @@ export function SpriteGeneratorPage() {
   }
 
   return (
-    <div className="bg-[#faf9f7] text-[#241b15]">
+    <div className="overflow-x-hidden bg-[#faf9f7] text-[#241b15]">
       <section
         id="generator"
         className="relative isolate overflow-hidden px-4 pb-16 pt-10 sm:px-6 lg:px-8 lg:pb-20 lg:pt-12"
@@ -478,17 +478,18 @@ export function SpriteGeneratorPage() {
             <p className="mx-auto mb-3 inline-flex rounded-full border border-[#241b15] bg-[#dff4e8] px-4 py-1.5 text-xs font-black uppercase tracking-[0.16em]">
               FOR INDIE 2D GAME DEVS
             </p>
-            <h1 className="font-bricolage-grotesque text-4xl font-black leading-[1.04] tracking-normal text-[#241b15] sm:text-5xl lg:text-6xl">
-              AI Sprite Generator for playable sprite packs.
+            <h1 className="mx-auto max-w-[22rem] text-balance font-bricolage-grotesque text-3xl font-black leading-[1.04] tracking-normal text-[#241b15] sm:max-w-none sm:text-5xl lg:text-6xl">
+              <span className="block">AI Sprite Generator</span>
+              <span className="block">for playable sprite packs.</span>
             </h1>
-            <p className="mx-auto mt-3 max-w-3xl text-base leading-7 text-[#6f6257] sm:text-lg">
+            <p className="mx-auto mt-3 max-w-[23rem] text-sm leading-7 text-[#6f6257] sm:max-w-3xl sm:text-lg">
               Drop in a character image or type a prompt, generate idle, walk,
               run, and attack animations, then export transparent spritesheets
               with Unity- and Godot-friendly data.
             </p>
             <nav
               aria-label="AI Sprite Generator page sections"
-              className="mt-4 flex flex-wrap justify-center gap-3 text-sm font-black text-[#241b15]"
+              className="mx-auto mt-4 flex max-w-[23rem] flex-wrap justify-center gap-3 text-xs font-black text-[#241b15] sm:max-w-none sm:text-sm"
             >
               <a
                 className="underline-offset-4 hover:underline"
@@ -508,18 +509,18 @@ export function SpriteGeneratorPage() {
             </nav>
           </div>
 
-          <div className="relative mx-auto mt-7 grid max-w-6xl gap-6 lg:grid-cols-[1fr_0.92fr] lg:items-stretch">
-            <div className="flex h-full rounded-[1.75rem] border-2 border-[#241b15] bg-white p-4 shadow-[10px_10px_0_#d8cec0] sm:p-5">
-              <div className="flex h-full w-full flex-col">
-                <div className="flex flex-1 flex-col rounded-[1.35rem] border-2 border-[#d8cec0] bg-white p-3 focus-within:border-[#241b15]">
+          <div className="relative mx-auto mt-7 grid w-full min-w-0 max-w-[calc(100vw-3rem)] gap-6 sm:max-w-6xl lg:grid-cols-[1fr_0.92fr] lg:items-stretch">
+            <div className="flex h-full min-w-0 rounded-[1.75rem] border-2 border-[#241b15] bg-white p-4 shadow-[6px_6px_0_#d8cec0] sm:p-5 sm:shadow-[10px_10px_0_#d8cec0]">
+              <div className="flex h-full w-full min-w-0 flex-col">
+                <div className="flex min-w-0 flex-1 flex-col rounded-[1.35rem] border-2 border-[#d8cec0] bg-white p-3 focus-within:border-[#241b15]">
                   <textarea
                     id="sprite-prompt"
                     value={prompt}
                     onChange={(event) => setPrompt(event.target.value)}
-                    className="min-h-44 flex-1 resize-none bg-transparent p-2 text-lg leading-7 text-[#241b15] outline-none placeholder:text-[#b5aa9f] sm:min-h-52 lg:min-h-60"
+                    className="min-h-44 w-full min-w-0 flex-1 resize-none bg-transparent p-2 text-base leading-7 text-[#241b15] outline-none placeholder:text-[#b5aa9f] sm:min-h-52 sm:text-lg lg:min-h-60"
                     placeholder="A tiny forest knight with a moss cape and glowing amber sword..."
                   />
-                  <div className="flex flex-wrap items-center gap-2 border-t border-[#eee3d7] px-1 pt-3">
+                  <div className="flex min-w-0 flex-wrap items-center gap-2 border-t border-[#eee3d7] px-1 pt-3">
                     <input
                       ref={fileInputRef}
                       type="file"
@@ -530,19 +531,19 @@ export function SpriteGeneratorPage() {
                     <button
                       type="button"
                       onClick={() => fileInputRef.current?.click()}
-                      className="inline-flex cursor-pointer items-center gap-2 rounded-full border border-[#241b15] bg-white px-3 py-2 text-sm font-black transition hover:bg-[#f7f2ea]"
+                      className="inline-flex w-full cursor-pointer items-center justify-center gap-2 rounded-full border border-[#241b15] bg-white px-3 py-2 text-sm font-black transition hover:bg-[#f7f2ea] sm:w-auto"
                     >
                       <Upload className="size-4" />
                       {referenceName ? 'Image added' : 'Upload Image'}
                     </button>
-                    <label className="inline-flex items-center gap-2 rounded-full border border-[#241b15] bg-[#dff4e8] px-3 py-2 text-sm font-black">
+                    <label className="inline-flex w-full min-w-0 items-center justify-between gap-2 rounded-full border border-[#241b15] bg-[#dff4e8] px-3 py-2 text-sm font-black sm:w-auto">
                       <span>Export Platform</span>
                       <select
                         value={platform}
                         onChange={(event) =>
                           setPlatform(event.target.value as Platform)
                         }
-                        className="cursor-pointer bg-transparent font-black outline-none"
+                        className="min-w-0 cursor-pointer bg-transparent font-black outline-none"
                       >
                         {platforms.map((item) => (
                           <option key={item.id} value={item.id}>
@@ -552,14 +553,14 @@ export function SpriteGeneratorPage() {
                       </select>
                       <ChevronDown className="size-4" />
                     </label>
-                    <label className="inline-flex items-center gap-2 rounded-full border border-[#241b15] bg-[#fff1a8] px-3 py-2 text-sm font-black">
+                    <label className="inline-flex w-full min-w-0 items-center justify-between gap-2 rounded-full border border-[#241b15] bg-[#fff1a8] px-3 py-2 text-sm font-black sm:w-auto">
                       <span>Action Pack</span>
                       <select
                         value={actionPack}
                         onChange={(event) =>
                           setActionPack(event.target.value as ActionPack)
                         }
-                        className="cursor-pointer bg-transparent font-black outline-none"
+                        className="min-w-0 cursor-pointer bg-transparent font-black outline-none"
                       >
                         {actionPacks.map((item) => (
                           <option key={item.id} value={item.id}>
@@ -572,7 +573,7 @@ export function SpriteGeneratorPage() {
                     <button
                       type="button"
                       onClick={() => setShowNotes((value) => !value)}
-                      className="inline-flex cursor-pointer items-center gap-2 rounded-full border border-[#241b15] bg-[#f7f2ea] px-3 py-2 text-sm font-black transition hover:bg-[#eee3d7]"
+                      className="inline-flex w-full cursor-pointer items-center justify-center gap-2 rounded-full border border-[#241b15] bg-[#f7f2ea] px-3 py-2 text-sm font-black transition hover:bg-[#eee3d7] sm:w-auto"
                     >
                       <Sparkles className="size-4" />
                       Anything else
