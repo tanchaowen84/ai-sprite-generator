@@ -43,8 +43,9 @@ const platforms: Array<{ id: Platform; label: string; helper: string }> = [
   { id: 'godot', label: 'Godot', helper: 'SpriteFrames + atlas' },
 ];
 
-const sampleSpriteSheet = '/images/ai-sprite/sample-sprite-sheet.png';
-const engineWorkflowShowcase = '/images/ai-sprite/engine-workflow-showcase.png';
+const sampleSpriteSheet = '/images/ai-sprite/sample-sprite-sheet.webp';
+const engineWorkflowShowcase =
+  '/images/ai-sprite/engine-workflow-showcase.webp';
 
 const actionPacks: Array<{ id: ActionPack; label: string; helper: string }> = [
   { id: 'platformer', label: 'Platformer', helper: 'idle, run, jump, attack' },
@@ -80,7 +81,7 @@ const useCases = [
   },
 ];
 
-const faqs = [
+export const spriteFaqs = [
   {
     q: 'Is this meant for final production art?',
     a: 'The MVP is built first for prototypes, demos, vertical slices, and pre-production. It can save real art direction time, but final production assets still need human review.',
@@ -174,6 +175,8 @@ function SpriteSheetMockup({ className }: { className?: string }) {
         <img
           src={sampleSpriteSheet}
           alt="Generated blue slime knight sprite sheet sample"
+          width={1254}
+          height={1254}
           className="aspect-square w-full object-contain"
         />
       </div>
@@ -187,6 +190,8 @@ function EngineExportMockup() {
       <img
         src={engineWorkflowShowcase}
         alt="Generated sprite sheet to engine preview workflow"
+        width={1586}
+        height={992}
         className="aspect-[16/10] w-full rounded-[1.5rem] object-cover"
       />
       <div className="mt-3 grid gap-3 sm:grid-cols-2">
@@ -496,13 +501,33 @@ export function SpriteGeneratorPage() {
               FOR INDIE 2D GAME DEVS
             </p>
             <h1 className="font-bricolage-grotesque text-4xl font-black leading-[1.04] tracking-normal text-[#241b15] sm:text-5xl lg:text-6xl">
-              Turn one character into a playable sprite pack.
+              AI Sprite Generator for playable sprite packs.
             </h1>
             <p className="mx-auto mt-3 max-w-3xl text-base leading-7 text-[#6f6257] sm:text-lg">
               Drop in a character image or type a prompt, generate idle, walk,
               run, and attack animations, then export transparent spritesheets
               with Unity- and Godot-friendly data.
             </p>
+            <nav
+              aria-label="AI Sprite Generator page sections"
+              className="mt-4 flex flex-wrap justify-center gap-3 text-sm font-black text-[#241b15]"
+            >
+              <a
+                className="underline-offset-4 hover:underline"
+                href="#how-it-works"
+              >
+                How AI Sprite Generator works
+              </a>
+              <a
+                className="underline-offset-4 hover:underline"
+                href="#features"
+              >
+                Sprite export features
+              </a>
+              <a className="underline-offset-4 hover:underline" href="#pricing">
+                Credit pricing
+              </a>
+            </nav>
           </div>
 
           <div className="relative mx-auto mt-7 grid max-w-6xl gap-6 lg:grid-cols-[1fr_0.92fr] lg:items-stretch">
@@ -633,7 +658,7 @@ export function SpriteGeneratorPage() {
               How it works
             </p>
             <h2 className="mt-3 font-bricolage-grotesque text-4xl font-black tracking-normal sm:text-6xl">
-              From character idea to usable sheet in one loop.
+              How the AI Sprite Generator turns an idea into a usable sheet.
             </h2>
           </div>
           <div className="grid gap-6 md:grid-cols-3">
@@ -663,7 +688,7 @@ export function SpriteGeneratorPage() {
               Use cases
             </p>
             <h2 className="mt-3 font-bricolage-grotesque text-4xl font-black tracking-normal sm:text-6xl">
-              Built for the moments when speed matters.
+              AI Sprite Generator use cases when speed matters.
             </h2>
           </div>
           <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-4">
@@ -702,12 +727,12 @@ export function SpriteGeneratorPage() {
                 Features
               </p>
               <h2 className="mt-3 font-bricolage-grotesque text-4xl font-black tracking-normal sm:text-6xl">
-                Not a vague AI image. A workflow asset.
+                AI Sprite Generator outputs workflow assets, not vague images.
               </h2>
               <p className="mt-5 text-lg leading-8 text-[#6f6257]">
-                The lower page uses concrete sprite and export visuals instead
-                of abstract engine-ready screenshots. Every block points at
-                something a developer can implement.
+                The AI Sprite Generator page uses concrete sprite and export
+                visuals instead of abstract engine-ready screenshots. Every
+                block points at something a developer can implement.
               </p>
               <div className="mt-8 grid gap-3 sm:grid-cols-2">
                 {featureChecks.map(({ label, icon: Icon }) => (
@@ -765,7 +790,7 @@ export function SpriteGeneratorPage() {
             Practical questions
           </h2>
           <div className="mt-10 space-y-4">
-            {faqs.map((item) => (
+            {spriteFaqs.map((item) => (
               <details
                 key={item.q}
                 className="group rounded-[1.5rem] border-2 border-[#241b15] bg-white p-5 shadow-[5px_5px_0_#d8cec0]"

@@ -1,2 +1,1 @@
-export { SpriteGeneratorPage } from './sprite-generator-page';
-
+export { SpriteGeneratorPage, spriteFaqs } from './sprite-generator-page';

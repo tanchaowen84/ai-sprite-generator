@@ -18,7 +18,7 @@ export const websiteConfig: WebsiteConfig = {
       enableSwitch: false,
     },
     images: {
-      ogImage: '/og.png',
+      ogImage: '/images/ai-sprite/og-ai-sprite-generator.png',
       logoLight: '/logo.png',
       logoDark: '/logo-dark.png',
     },
