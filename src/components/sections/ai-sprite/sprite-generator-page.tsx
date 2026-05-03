@@ -617,13 +617,13 @@ export function SpriteGeneratorPage() {
               The annoying part
             </p>
             <h2 className="mt-3 font-bricolage-grotesque text-4xl font-black tracking-normal sm:text-6xl">
-              You have a character idea. The slow part is making it move.
+              Sprite sheet workflow
             </h2>
             <p className="mt-5 text-lg leading-8 text-[#6f6257]">
-              Most indie teams do not need a polished character at first. They
-              need to know whether the character reads in motion and whether the
-              files can land in the engine without a cleanup spiral. AI Sprite
-              Generator keeps that first pass small enough to try.
+              You already have the character idea. The slow part is getting it
+              into idle, walk, run, and attack frames without losing the rest of
+              the build day. AI Sprite Generator keeps that first pass small
+              enough to try.
             </p>
           </div>
           <div className="grid gap-6 md:grid-cols-3">
@@ -653,7 +653,7 @@ export function SpriteGeneratorPage() {
               Where it helps
             </p>
             <h2 className="mt-3 font-bricolage-grotesque text-4xl font-black tracking-normal sm:text-6xl">
-              When placeholder art starts lying to you.
+              Prototype use cases
             </h2>
             <p className="mt-5 max-w-3xl text-lg leading-8 text-[#38634d]">
               A gray box can test collision, but it cannot tell you if a
@@ -698,8 +698,7 @@ export function SpriteGeneratorPage() {
                 The files matter
               </p>
               <h2 className="mt-3 font-bricolage-grotesque text-4xl font-black tracking-normal sm:text-6xl">
-                A generated image is not enough if you still have to rebuild the
-                sheet.
+                Export-ready sprite sheets
               </h2>
               <p className="mt-5 text-lg leading-8 text-[#6f6257]">
                 A useful AI Sprite Generator should get closer to the boring
@@ -726,7 +725,7 @@ export function SpriteGeneratorPage() {
                 Engine handoff
               </p>
               <h3 className="mt-3 font-bricolage-grotesque text-4xl font-black tracking-normal sm:text-5xl">
-                Unity and Godot should not turn into manual atlas cleanup.
+                Unity and Godot export
               </h3>
               <p className="mt-5 text-lg leading-8 text-[#6f6257]">
                 The composer groups engine choice under Export Platform because
@@ -760,11 +759,11 @@ export function SpriteGeneratorPage() {
       <section id="faq" className="px-4 py-24 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-4xl">
           <h2 className="font-bricolage-grotesque text-4xl font-black tracking-normal sm:text-6xl">
-            Before you try it
+            Common questions
           </h2>
           <p className="mt-5 text-lg leading-8 text-[#6f6257]">
             These answers stay close to the current MVP: prototype asset flow,
-            reference-assisted generation, and export inspection on one page.
+            reference-assisted generation, and export inspection.
           </p>
           <div className="mt-10 space-y-4">
             {spriteFaqs.map((item) => (
@@ -787,7 +786,7 @@ export function SpriteGeneratorPage() {
         <div className="mx-auto max-w-7xl overflow-hidden rounded-[2.5rem] border-2 border-[#241b15] bg-[#ef5d75] p-10 text-white shadow-[16px_16px_0_#cbb7ff] sm:p-16">
           <div className="max-w-3xl">
             <h2 className="font-bricolage-grotesque text-4xl font-black tracking-normal sm:text-6xl">
-              Try one character before you commit to the art pass.
+              Generate one sprite pack
             </h2>
             <p className="mt-5 text-lg leading-8 text-white/85">
               Give AI Sprite Generator one character prompt or reference image,

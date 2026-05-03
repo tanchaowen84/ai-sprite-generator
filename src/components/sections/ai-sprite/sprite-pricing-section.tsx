@@ -83,14 +83,12 @@ export function SpritePricingSection({
             Credits
           </p>
           <h2 className="mt-3 font-bricolage-grotesque text-4xl font-black tracking-normal sm:text-6xl">
-            Pay for the runs you actually use.
+            Credit plans
           </h2>
           <p className="mx-auto mt-5 max-w-2xl text-lg leading-8 text-[#6f6257]">
             AI Sprite Generator uses credits because every generation has a real
-            cost. Starter is for light exploration. Pro is for builders who test
-            more characters and keep the sprite sheet generator close to their
-            monthly workflow. Switch billing to see the yearly price with two
-            months included.
+            cost. Starter is for light exploration. Pro is for builders testing
+            more characters each month.
           </p>
         </div>
 
