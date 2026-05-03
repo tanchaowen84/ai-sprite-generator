@@ -83,7 +83,7 @@ export function SpritePricingSection({
             Credits
           </p>
           <h2 className="mt-3 font-bricolage-grotesque text-4xl font-black tracking-normal sm:text-6xl">
-            Credit plans
+            Sprite credit plans
           </h2>
           <p className="mx-auto mt-5 max-w-2xl text-lg leading-8 text-[#6f6257]">
             AI Sprite Generator uses credits because every generation has a real

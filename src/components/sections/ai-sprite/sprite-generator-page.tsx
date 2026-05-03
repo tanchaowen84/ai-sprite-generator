@@ -654,7 +654,7 @@ export function SpriteGeneratorPage() {
               Where it helps
             </p>
             <h2 className="mt-3 font-bricolage-grotesque text-4xl font-black tracking-normal sm:text-6xl">
-              Prototype use cases
+              Game sprite use cases
             </h2>
             <p className="mt-5 max-w-3xl text-lg leading-8 text-[#38634d]">
               A gray box can test collision, but it cannot tell you if a
