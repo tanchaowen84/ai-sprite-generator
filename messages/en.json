@@ -32,8 +32,8 @@
   },
   "PricingPage": {
     "title": "Pricing",
-    "description": "Choose sprite generation credits for your prototype workflow",
-    "subtitle": "Choose sprite generation credits for your prototype workflow",
+    "description": "Choose sprite generation credits for prototypes and game jams",
+    "subtitle": "Choose sprite generation credits for prototypes and game jams",
     "monthly": "Monthly",
     "yearly": "Yearly",
     "PricingCard": {
@@ -56,7 +56,7 @@
   "PricePlans": {
     "free": {
       "name": "Free",
-      "description": "Try the core sprite generation loop before upgrading.",
+      "description": "Try AI Sprite Generator before upgrading.",
       "features": {
         "feature-1": "Prompt-to-sprite generation",
         "feature-2": "Upload one reference image",
@@ -129,8 +129,8 @@
         "feature-5": "15 free redo runs per month"
       },
       "limits": {
-        "limit-1": "Downloadable engine packs ship after MVP validation",
-        "limit-2": "API access is not included in the MVP"
+        "limit-1": "Downloadable engine packs depend on the generated result",
+        "limit-2": "API access is not included"
       }
     }
   },
@@ -550,20 +550,20 @@
         },
         "step-3": {
           "title": "Generate and inspect the sheet.",
-          "description": "Review the generated sprite sheet, metadata, and task status before moving into cleanup or download workflows.",
+          "description": "Review the generated sprite sheet, metadata, and task status before cleanup or download.",
           "button": "Generate Sheet"
         }
       }
     },
     "scrollStack": {
-      "title": "AI Sprite Generator keeps the first asset loop fast.",
-      "description": "Explore the prompt, sprite sheet, export metadata, and pricing flow.",
+      "title": "AI Sprite Generator keeps the first asset pass fast.",
+      "description": "Explore the prompt, sprite sheet, export files, and credit plans.",
       "cards": {
         "card-1": {
           "title": "Prompt-to-sprite generation",
           "description": "Turn one character description into a consistent sheet preview.",
           "subtext": [
-            "The MVP is built for prototypes, game jams, and pre-production decisions.",
+            "The generator is designed for prototypes, game jams, and pre-production decisions.",
             "Prompts stay focused on readable 2D motion rather than generic AI art.",
             "The generated result can be reviewed before any heavier export work."
           ],
@@ -574,7 +574,7 @@
           "description": "Upload a sketch or existing character to guide generation.",
           "subtext": [
             "Reference image support helps preserve the character direction.",
-            "The upload flow stays lightweight inside the hero composer.",
+            "Upload stays lightweight inside the generator.",
             "The user can retry without rebuilding the whole request."
           ],
           "cta": "Upload Image"
@@ -583,9 +583,9 @@
           "title": "Action pack presets",
           "description": "Choose platformer, top-down, action RPG, or a custom pack.",
           "subtext": [
-            "Preset packs keep the first version simple and practical.",
+            "Preset packs keep the request simple and practical.",
             "Custom notes handle unusual poses without crowding the main input.",
-            "The workflow favors one need per page rather than many thin pages."
+            "The generator keeps one clear job on the page."
           ],
           "cta": "Choose Pack"
         },
@@ -603,27 +603,27 @@
           "title": "Pricing that matches usage",
           "description": "Use credits for image generation cost control.",
           "subtext": [
-            "Free users can validate the loop before paying.",
+            "Free users can try the generator before paying.",
             "Pro plans are aimed at active prototype iteration.",
-            "Credit packs can be added later through Creem."
+            "Credits keep image generation cost predictable."
           ],
           "cta": "View Pricing"
         },
         "card-6": {
-          "title": "MVP-first development",
-          "description": "Keep the first version on the homepage unless the PRD needs more pages.",
+          "title": "Generate on the page",
+          "description": "Create a sprite pack directly from the page without opening a separate dashboard.",
           "subtext": [
-            "The hero owns the main generation interaction.",
-            "The lower landing page supports trust, use cases, and pricing.",
-            "Inner pages can reuse the same flow when a new need appears."
+            "Describe the character and choose the export platform in one place.",
+            "Review the result before downloading files.",
+            "Use the same page when you want another pass."
           ],
-          "cta": "Start MVP"
+          "cta": "Start generating"
         }
       }
     },
     "gallery": {
       "eyebrow": "Showcase",
-      "title": "Sprite sheets and engine workflow previews.",
+      "title": "Sprite sheets and engine previews.",
       "description": "Use concrete generated assets instead of abstract decoration so builders can judge the output quickly.",
       "button": "View examples",
       "items": {
@@ -652,7 +652,7 @@
     "faqProcess": {
       "eyebrow": "FAQ",
       "title": "Questions answered before you generate.",
-      "description": "Everything you need to know about the AI Sprite Generator MVP.",
+      "description": "Clear answers about AI Sprite Generator, credits, exports, and review.",
       "button": "Get started",
       "items": {
         "item-1": {
@@ -661,7 +661,7 @@
         },
         "item-2": {
           "question": "Can I upload a reference image?",
-          "answer": "Yes. The hero composer supports a lightweight reference upload so the generated sprite sheet can follow an existing character direction."
+          "answer": "Yes. The generator supports a lightweight reference upload so the generated sprite sheet can follow an existing character direction."
         },
         "item-3": {
           "question": "Does it support Unity and Godot?",
@@ -669,15 +669,15 @@
         },
         "item-4": {
           "question": "Is this final production art?",
-          "answer": "The MVP is designed first for prototypes and pre-production. Final production assets should still be reviewed and polished by a human artist."
+          "answer": "AI Sprite Generator is designed for prototypes and pre-production. Final production assets should still be reviewed and polished by a human artist."
         },
         "item-5": {
           "question": "How does pricing work?",
-          "answer": "The product uses a credit-based model because image generation has real per-use cost. Starter is $12/month, Pro is $29/month, and yearly billing uses the 10-month price."
+          "answer": "AI Sprite Generator uses a credit-based model because image generation has real per-use cost. Starter is $12/month, Pro is $29/month, and yearly billing uses the 10-month price."
         },
         "item-6": {
           "question": "Can I download engine packs?",
-          "answer": "The first version focuses on generation and preview. Downloadable packed exports can be added after the core loop is validated."
+          "answer": "The generator focuses on sheet preview and downloadable files, including the export details needed for inspection."
         },
         "item-7": {
           "question": "Can I use the output commercially?",
@@ -685,18 +685,18 @@
         },
         "item-8": {
           "question": "Is Google login the only login method?",
-          "answer": "Yes. This MVP keeps authentication simple and only exposes Google login."
+          "answer": "Yes. AI Sprite Generator keeps authentication simple and only exposes Google login."
         },
         "item-9": {
-          "question": "Will this need a dashboard?",
-          "answer": "Not for the MVP if the homepage can solve the job directly. A dashboard can come later when history, downloads, or billing workflows demand it."
+          "question": "Can I use it from this page?",
+          "answer": "Yes. The main page is built for generating, reviewing, and downloading sprite packs without sending you through extra screens."
         }
       }
     },
     "ctaProcess": {
       "eyebrow": "Ready to start?",
       "title": "Generate your first sprite pack today.",
-      "description": "Describe one character, pick the export platform, and inspect the generated sheet before deciding what to automate next.",
+      "description": "Describe one character, pick the export platform, and inspect the generated sheet before downloading the files.",
       "primary": "Generate Sprite Pack",
       "secondary": "View Pricing"
     }

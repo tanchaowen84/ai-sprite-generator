@@ -61,7 +61,7 @@ async function parseJsonResponse<T>(response: Response): Promise<T> {
   if (!response.ok) {
     const message =
       (data as ApimartErrorBody).error?.message ??
-      `APIMart request failed with status ${response.status}`;
+      `Image generation provider request failed with status ${response.status}`;
     throw new Error(message);
   }
 
@@ -101,7 +101,7 @@ export async function submitSpriteImageGeneration({
   const taskId = firstTask?.task_id;
 
   if (!taskId) {
-    throw new Error('APIMart did not return a task_id');
+    throw new Error('Image generation provider did not return a task id');
   }
 
   return {

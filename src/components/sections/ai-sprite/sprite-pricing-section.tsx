@@ -21,7 +21,7 @@ const pricingPlans = [
       year: '360 sprite credits / year',
     },
     badge: 'Solo dev',
-    body: 'For game jams, solo prototypes, and validating the AI Sprite Generator loop without a heavy subscription.',
+    body: 'For game jams and solo prototypes when you need enough credits to try several sprite directions.',
     cta: 'Choose Starter',
     accent: 'bg-[#dff4e8]',
     shadow: 'shadow-[10px_10px_0_#d8cec0]',

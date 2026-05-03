@@ -75,7 +75,7 @@ const useCases = [
     icon: Layers3,
   },
   {
-    title: 'Engine workflow checks',
+    title: 'Engine handoff checks',
     body: 'Export platform matters because the next step is usually Unity or Godot. Keep that choice in the request so the sheet and metadata stay together.',
     accent: 'bg-[#8be6ff]',
     icon: Play,
@@ -104,7 +104,7 @@ const featureChecks: Array<{ label: string; icon: LucideIcon }> = [
   { label: 'Consistent frames', icon: ShieldCheck },
   { label: 'Transparent-ready keying', icon: CheckCircle2 },
   { label: 'Redo-friendly loop', icon: RotateCcw },
-  { label: 'Prototype-first exports', icon: Zap },
+  { label: 'Prototype export files', icon: Zap },
 ];
 
 const featureCards: Array<{
@@ -119,7 +119,7 @@ const featureCards: Array<{
   },
   {
     title: 'Download path',
-    body: 'The MVP supports transparent sheet export, frame PNGs, animation GIF, atlas JSON, prompt, metadata, and a ZIP pack. The product loop is built around export, not just preview.',
+    body: 'The export pack includes transparent sheet output, frame PNGs, animation GIF, atlas JSON, prompt, metadata, and a ZIP file. The result is built around download, not just preview.',
     icon: Download,
   },
   {
@@ -167,7 +167,7 @@ function EngineExportMockup() {
     <div className="min-w-0 overflow-hidden rounded-[2rem] border-2 border-[#241b15] bg-white p-3 shadow-[6px_6px_0_#d8cec0] sm:shadow-[12px_12px_0_#d8cec0]">
       <img
         src={engineWorkflowShowcase}
-        alt="Generated sprite sheet to engine preview workflow"
+        alt="Generated sprite sheet prepared for Unity and Godot preview"
         width={1586}
         height={992}
         className="aspect-[16/10] w-full rounded-[1.5rem] object-cover"
@@ -762,8 +762,8 @@ export function SpriteGeneratorPage() {
             Common questions
           </h2>
           <p className="mt-5 text-lg leading-8 text-[#6f6257]">
-            These answers stay close to the current MVP: prototype asset flow,
-            reference-assisted generation, and export inspection.
+            These answers focus on what you can create, review, and download
+            from the generator.
           </p>
           <div className="mt-10 space-y-4">
             {spriteFaqs.map((item) => (
