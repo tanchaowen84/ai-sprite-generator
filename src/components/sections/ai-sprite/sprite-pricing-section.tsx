@@ -21,7 +21,7 @@ const pricingPlans = [
       year: '360 sprite credits / year',
     },
     badge: 'Solo dev',
-    body: 'For game jams, solo prototypes, and validating one character workflow without a heavy subscription.',
+    body: 'For game jams, solo prototypes, and validating the AI Sprite Generator loop without a heavy subscription.',
     cta: 'Choose Starter',
     accent: 'bg-[#dff4e8]',
     shadow: 'shadow-[10px_10px_0_#d8cec0]',
@@ -29,8 +29,8 @@ const pricingPlans = [
       'Prompt-to-sprite generation',
       'Reference image assisted generation',
       'Basic and common action packs',
-      'Unlimited exports',
-      '5 free redo runs / month',
+      'PNG, GIF, JSON, and ZIP exports',
+      'Prompt and metadata included',
     ],
   },
   {
@@ -49,7 +49,7 @@ const pricingPlans = [
       year: '1,200 sprite credits / year',
     },
     badge: 'Best value',
-    body: 'For active indie builders and small teams creating multiple characters and movesets every month.',
+    body: 'For active indie builders and small teams using AI Sprite Generator across more character ideas, action packs, and engine checks.',
     cta: 'Choose Pro',
     accent: 'bg-[#fff1a8]',
     shadow: 'shadow-[12px_12px_0_#241b15]',
@@ -57,9 +57,9 @@ const pricingPlans = [
     features: [
       'Everything in Starter',
       'Custom action prompts',
-      'Batch generation and preset saves',
+      'More monthly sprite credits',
       'Reference image assisted generation',
-      '15 free redo runs / month',
+      'PNG, GIF, JSON, and ZIP exports',
     ],
   },
 ];
@@ -83,11 +83,14 @@ export function SpritePricingSection({
             Pricing
           </p>
           <h2 className="mt-3 font-bricolage-grotesque text-4xl font-black tracking-normal sm:text-6xl">
-            Credit-based plans for prototype velocity.
+            Credit-based plans for real prototype work.
           </h2>
           <p className="mx-auto mt-5 max-w-2xl text-lg leading-8 text-[#6f6257]">
-            Starter and Pro map to real generation credits. Switch billing to
-            see the yearly price with two months included.
+            AI Sprite Generator uses credits because image generation has a real
+            per-run cost. Starter is for light exploration. Pro is for builders
+            who test more characters and keep the sprite sheet generator close
+            to their monthly workflow. Switch billing to see the yearly price
+            with two months included.
           </p>
         </div>
 
