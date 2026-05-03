@@ -247,13 +247,13 @@
   "Marketing": {
     "navbar": {
       "features": {
-        "title": "Features"
+        "title": "Output"
       },
       "pricing": {
-        "title": "Pricing"
+        "title": "Credits"
       },
       "faq": {
-        "title": "FAQ"
+        "title": "Questions"
       },
       "blog": {
         "title": "Blog"

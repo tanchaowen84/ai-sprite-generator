@@ -48,7 +48,7 @@ const pricingPlans = [
       month: '100 sprite credits / month',
       year: '1,200 sprite credits / year',
     },
-    badge: 'Best value',
+    badge: 'More credits',
     body: 'For active indie builders and small teams using AI Sprite Generator across more character ideas, action packs, and engine checks.',
     cta: 'Choose Pro',
     accent: 'bg-[#fff1a8]',
@@ -80,17 +80,17 @@ export function SpritePricingSection({
       <div className="mx-auto max-w-7xl">
         <div className="mx-auto mb-12 max-w-3xl text-center">
           <p className="text-sm font-black uppercase tracking-[0.2em] text-[#6f6257]">
-            Pricing
+            Credits
           </p>
           <h2 className="mt-3 font-bricolage-grotesque text-4xl font-black tracking-normal sm:text-6xl">
-            Credit-based plans for real prototype work.
+            Pay for the runs you actually use.
           </h2>
           <p className="mx-auto mt-5 max-w-2xl text-lg leading-8 text-[#6f6257]">
-            AI Sprite Generator uses credits because image generation has a real
-            per-run cost. Starter is for light exploration. Pro is for builders
-            who test more characters and keep the sprite sheet generator close
-            to their monthly workflow. Switch billing to see the yearly price
-            with two months included.
+            AI Sprite Generator uses credits because every generation has a real
+            cost. Starter is for light exploration. Pro is for builders who test
+            more characters and keep the sprite sheet generator close to their
+            monthly workflow. Switch billing to see the yearly price with two
+            months included.
           </p>
         </div>
 
@@ -135,7 +135,7 @@ export function SpritePricingSection({
                 </span>
                 {plan.featured ? (
                   <span className="rounded-full bg-[#241b15] px-3 py-1 text-xs font-black uppercase tracking-[0.14em] text-white">
-                    {isYearly ? '2 months free' : 'Most credits'}
+                    {isYearly ? '2 months free' : 'More monthly runs'}
                   </span>
                 ) : null}
               </div>
