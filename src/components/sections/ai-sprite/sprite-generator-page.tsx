@@ -58,25 +58,25 @@ const actionPacks: Array<{ id: ActionPack; label: string; helper: string }> = [
 const useCases = [
   {
     title: 'Game jams',
-    body: 'A jam build does not wait for perfect art. Use AI Sprite Generator to get a readable sheet into the build and keep testing.',
+    body: 'A jam build does not wait for perfect art. Use AI Sprite Generator as a fast sprite sheet generator to get a readable game sprite into the build and keep testing.',
     accent: 'bg-[#f8df74]',
     icon: Timer,
   },
   {
     title: 'Solo dev vertical slices',
-    body: 'When you are coding, balancing, and making art alone, the first sprite sheet should not become a side quest. Generate a pass, test it, and keep moving.',
+    body: 'When you are coding, balancing, and making art alone, the first 2D sprite sheet should not become a side quest. Generate a pass, test it, and keep moving.',
     accent: 'bg-[#a7e8bd]',
     icon: Gamepad2,
   },
   {
     title: 'Pre-production',
-    body: 'Before the art pass is locked, AI Sprite Generator helps compare silhouettes and motion ideas while the character is still cheap to change.',
+    body: 'Before the art pass is locked, AI Sprite Generator helps compare game sprite silhouettes and motion ideas while the character is still cheap to change.',
     accent: 'bg-[#cbb7ff]',
     icon: Layers3,
   },
   {
     title: 'Engine handoff checks',
-    body: 'Export platform matters because the next step is usually Unity or Godot. Keep that choice in the request so the sheet and metadata stay together.',
+    body: 'Export platform matters because the next step is usually Unity sprite sheet export or Godot sprite sheet export. Keep that choice in the request so the sheet and metadata stay together.',
     accent: 'bg-[#8be6ff]',
     icon: Play,
   },
@@ -86,17 +86,17 @@ const workflowSteps: Array<{ step: string; title: string; body: string }> = [
   {
     step: '1',
     title: 'Bring the rough character',
-    body: 'Start with what you already have: a prompt, a sketch, or a reference image. AI Sprite Generator works best when the request says who the character is and how it should move.',
+    body: 'Start with what you already have: a prompt, a sketch, or a reference image. AI Sprite Generator works as a 2D sprite generator when the request says who the character is and how it should move.',
   },
   {
     step: '2',
     title: 'Pick the motion you need',
-    body: 'Choose the action pack your prototype needs, then choose one export platform. Unity and Godot stay grouped because they are one downstream decision.',
+    body: 'Choose the action pack your prototype needs, then choose one export platform. Unity and Godot stay grouped because they are one downstream sprite sheet decision.',
   },
   {
     step: '3',
     title: 'Check the sheet before cleanup',
-    body: 'Generate the pack, inspect the sheet on the same page, then download the files you need. You should be able to tell quickly whether it is useful.',
+    body: 'Generate the sprite pack, inspect the sprite sheet on the same page, then download the files you need. You should be able to tell quickly whether it is useful.',
   },
 ];
 
@@ -119,12 +119,12 @@ const featureCards: Array<{
   },
   {
     title: 'Download path',
-    body: 'The export pack includes transparent sheet output, frame PNGs, animation GIF, atlas JSON, prompt, metadata, and a ZIP file. The result is built around download, not just preview.',
+    body: 'The sprite pack includes transparent sheet output, frame PNGs, animation GIF, atlas JSON, prompt, metadata, and a ZIP file. The result is built around download, not just preview.',
     icon: Download,
   },
   {
     title: 'Reference upload',
-    body: 'If you already have a sketch or existing character art, reference upload helps AI Sprite Generator follow that direction instead of starting from a blank prompt.',
+    body: 'If you already have a sketch or existing character art, reference upload helps AI Sprite Generator follow that game sprite direction instead of starting from a blank prompt.',
     icon: ImagePlus,
   },
 ];
@@ -483,9 +483,10 @@ export function SpriteGeneratorPage() {
               <span className="block">for playable sprite packs.</span>
             </h1>
             <p className="mx-auto mt-3 max-w-[23rem] text-sm leading-7 text-[#6f6257] sm:max-w-3xl sm:text-lg">
-              Make a character sheet without breaking your build flow. Type a
+              Make a 2D sprite sheet without breaking your build flow. Type a
               prompt or upload a reference image, choose the action pack, and
-              let AI Sprite Generator return an inspectable, exportable sheet.
+              let AI Sprite Generator return an inspectable sprite sheet and
+              exportable sprite pack.
             </p>
           </div>
 
@@ -622,8 +623,8 @@ export function SpriteGeneratorPage() {
             <p className="mt-5 text-lg leading-8 text-[#6f6257]">
               You already have the character idea. The slow part is getting it
               into idle, walk, run, and attack frames without losing the rest of
-              the build day. AI Sprite Generator keeps that first pass small
-              enough to try.
+              the build day. AI Sprite Generator keeps that 2D sprite sheet pass
+              small enough to try.
             </p>
           </div>
           <div className="grid gap-6 md:grid-cols-3">
@@ -659,7 +660,7 @@ export function SpriteGeneratorPage() {
               A gray box can test collision, but it cannot tell you if a
               character feels too heavy or unreadable during an attack. AI
               Sprite Generator is for the middle step where the art is not
-              final, but the build needs a character that moves.
+              final, but the build needs a game sprite that moves.
             </p>
           </div>
           <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-4">
@@ -701,9 +702,9 @@ export function SpriteGeneratorPage() {
                 Export-ready sprite sheets
               </h2>
               <p className="mt-5 text-lg leading-8 text-[#6f6257]">
-                A useful AI Sprite Generator should get closer to the boring
-                files a developer actually needs: transparent PNG output, frame
-                files, GIF preview, atlas JSON, and a ZIP pack.
+                A useful AI sprite sheet generator should get closer to the
+                boring files a developer actually needs: transparent PNG output,
+                frame files, GIF preview, atlas JSON, and a ZIP pack.
               </p>
               <div className="mt-8 grid gap-3 sm:grid-cols-2">
                 {featureChecks.map(({ label, icon: Icon }) => (
@@ -730,8 +731,8 @@ export function SpriteGeneratorPage() {
               <p className="mt-5 text-lg leading-8 text-[#6f6257]">
                 The composer groups engine choice under Export Platform because
                 the user is making one downstream decision. That keeps the first
-                interaction compact and still tells AI Sprite Generator how the
-                exported data should be prepared.
+                interaction compact and still tells the sprite sheet generator
+                how the exported data should be prepared for Unity or Godot.
               </p>
             </div>
             <div className="order-1 lg:order-2">
@@ -763,7 +764,7 @@ export function SpriteGeneratorPage() {
           </h2>
           <p className="mt-5 text-lg leading-8 text-[#6f6257]">
             These answers focus on what you can create, review, and download
-            from the generator.
+            from the 2D sprite sheet generator.
           </p>
           <div className="mt-10 space-y-4">
             {spriteFaqs.map((item) => (
@@ -790,8 +791,8 @@ export function SpriteGeneratorPage() {
             </h2>
             <p className="mt-5 text-lg leading-8 text-white/85">
               Give AI Sprite Generator one character prompt or reference image,
-              then judge the result where the work starts: on the page, beside
-              the input, before a longer art pipeline.
+              then judge the sprite pack where the work starts: on the page,
+              beside the input, before a longer art pipeline.
             </p>
             <a
               href="#generator"

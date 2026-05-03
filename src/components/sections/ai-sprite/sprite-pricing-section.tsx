@@ -21,7 +21,7 @@ const pricingPlans = [
       year: '360 sprite credits / year',
     },
     badge: 'Solo dev',
-    body: 'For game jams and solo prototypes when you need enough credits to try several sprite directions.',
+    body: 'For game jams and solo prototypes when you need enough credits to try several 2D sprite directions.',
     cta: 'Choose Starter',
     accent: 'bg-[#dff4e8]',
     shadow: 'shadow-[10px_10px_0_#d8cec0]',
@@ -49,7 +49,7 @@ const pricingPlans = [
       year: '1,200 sprite credits / year',
     },
     badge: 'More credits',
-    body: 'For active indie builders and small teams using AI Sprite Generator across more character ideas, action packs, and engine checks.',
+    body: 'For active indie builders and small teams using AI Sprite Generator across more character ideas, sprite packs, and engine checks.',
     cta: 'Choose Pro',
     accent: 'bg-[#fff1a8]',
     shadow: 'shadow-[12px_12px_0_#241b15]',
@@ -87,8 +87,8 @@ export function SpritePricingSection({
           </h2>
           <p className="mx-auto mt-5 max-w-2xl text-lg leading-8 text-[#6f6257]">
             AI Sprite Generator uses credits because every generation has a real
-            cost. Starter is for light exploration. Pro is for builders testing
-            more characters each month.
+            cost. Starter is for light sprite sheet exploration. Pro is for
+            builders testing more game sprites each month.
           </p>
         </div>
 

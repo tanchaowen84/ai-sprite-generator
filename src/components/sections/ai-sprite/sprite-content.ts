@@ -1,7 +1,7 @@
 export const spriteFaqs = [
   {
     q: 'Is AI Sprite Generator meant for final production art?',
-    a: 'AI Sprite Generator is designed for prototypes, demos, game jams, vertical slices, and pre-production decisions. It can save real art direction time, but final production assets should still be reviewed and polished by a human artist.',
+    a: 'AI Sprite Generator is designed for prototypes, demos, game jams, vertical slices, and pre-production decisions. It can save real 2D sprite sheet planning time, but final production assets should still be reviewed and polished by a human artist.',
   },
   {
     q: 'Can I upload my own character image?',
@@ -9,11 +9,11 @@ export const spriteFaqs = [
   },
   {
     q: 'What do I get back?',
-    a: 'You get a generated sprite sheet plus export files from the generator: transparent PNG output, frame PNGs, animation GIF, atlas JSON, generation notes, and a ZIP pack.',
+    a: 'You get a generated sprite sheet from AI Sprite Generator plus export files: transparent PNG output, frame PNGs, animation GIF, atlas JSON, generation notes, and a ZIP sprite pack.',
   },
   {
     q: 'Why group Unity and Godot together?',
-    a: 'They are the same decision type: export platform. The generator keeps one platform selector so the AI Sprite Generator request stays compact while still preparing data for Unity or Godot.',
+    a: 'They are the same decision type: export platform. AI Sprite Generator keeps one platform selector so the sprite sheet request stays compact while still preparing data for Unity or Godot.',
   },
   {
     q: 'What happens if generation fails?',
