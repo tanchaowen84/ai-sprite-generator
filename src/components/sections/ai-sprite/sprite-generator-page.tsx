@@ -760,7 +760,7 @@ export function SpriteGeneratorPage() {
       <section id="faq" className="px-4 py-24 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-4xl">
           <h2 className="font-bricolage-grotesque text-4xl font-black tracking-normal sm:text-6xl">
-            FAQ (Frequently Asked Questions)
+            Frequently Asked Questions
           </h2>
           <p className="mt-5 text-lg leading-8 text-[#6f6257]">
             These answers focus on what you can create, review, and download
