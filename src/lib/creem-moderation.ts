@@ -40,10 +40,8 @@ function normalizeDecision(value: unknown): CreemModerationDecision | null {
 
 export async function assertPromptIsAllowed({
   prompt,
-  metadata,
 }: {
   prompt: string;
-  metadata?: Record<string, string>;
 }) {
   const controller = new AbortController();
   const timeout = setTimeout(() => controller.abort(), MODERATION_TIMEOUT_MS);
@@ -57,7 +55,6 @@ export async function assertPromptIsAllowed({
       },
       body: JSON.stringify({
         prompt,
-        metadata,
       }),
       signal: controller.signal,
       cache: 'no-store',

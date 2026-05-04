@@ -21,11 +21,6 @@ export async function POST(request: Request) {
     const body = requestSchema.parse(await request.json());
     await assertPromptIsAllowed({
       prompt: [body.prompt, body.notes].filter(Boolean).join('\n\n'),
-      metadata: {
-        product: 'ai-sprite-generator',
-        actionPack: body.actionPack,
-        platform: body.platform,
-      },
     });
 
     const plan = buildSpriteForgePlan({
