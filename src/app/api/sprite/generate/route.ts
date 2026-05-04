@@ -1,3 +1,4 @@
+import { assertPromptIsAllowed } from '@/lib/creem-moderation';
 import { submitSpriteImageGeneration } from '@/lib/apimart';
 import { buildSpriteForgePlan } from '@/lib/sprite-forge/prompt';
 import { NextResponse } from 'next/server';
@@ -18,6 +19,15 @@ const requestSchema = z.object({
 export async function POST(request: Request) {
   try {
     const body = requestSchema.parse(await request.json());
+    await assertPromptIsAllowed({
+      prompt: [body.prompt, body.notes].filter(Boolean).join('\n\n'),
+      metadata: {
+        product: 'ai-sprite-generator',
+        actionPack: body.actionPack,
+        platform: body.platform,
+      },
+    });
+
     const plan = buildSpriteForgePlan({
       prompt: body.prompt,
       platform: body.platform,
@@ -43,7 +53,10 @@ export async function POST(request: Request) {
     console.error('[sprite.generate] Failed to start generation', error);
 
     return NextResponse.json(
-      { error: 'Failed to start generation. Please try again.' },
+      {
+        error:
+          'We could not process that request. Please revise the prompt and try again.',
+      },
       { status: 400 }
     );
   }
