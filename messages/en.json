@@ -347,14 +347,14 @@
       }
     },
     "avatar": {
-      "dashboard": "Dashboard",
+      "dashboard": "Workspace",
       "billing": "Billing",
       "settings": "Settings"
     }
   },
   "Dashboard": {
     "dashboard": {
-      "title": "Dashboard"
+      "title": "Workspace"
     },
     "admin": {
       "title": "Admin",
@@ -477,9 +477,9 @@
       }
     },
     "upgrade": {
-      "title": "Upgrade",
-      "description": "Upgrade to Pro to access all features",
-      "button": "Upgrade"
+      "title": "More credits",
+      "description": "Choose Starter or Pro when you need more sprite generations.",
+      "button": "View plans"
     }
   },
   "Mail": {
