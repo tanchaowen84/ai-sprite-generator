@@ -5,7 +5,6 @@ import type { NestedMenuItem } from '@/types';
 import {
   CircleUserRoundIcon,
   CreditCardIcon,
-  LayoutDashboardIcon,
   Settings2Icon,
   SettingsIcon,
   UsersRoundIcon,
@@ -29,12 +28,6 @@ export function getSidebarLinks(): NestedMenuItem[] {
   const isDemo = process.env.NEXT_PUBLIC_DEMO_WEBSITE === 'true';
 
   return [
-    {
-      title: t('dashboard.title'),
-      icon: <LayoutDashboardIcon className="size-4 shrink-0" />,
-      href: Routes.Dashboard,
-      external: false,
-    },
     {
       title: t('admin.title'),
       icon: <SettingsIcon className="size-4 shrink-0" />,

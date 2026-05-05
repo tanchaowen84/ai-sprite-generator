@@ -347,15 +347,11 @@
       }
     },
     "avatar": {
-      "dashboard": "Workspace",
       "billing": "Billing",
-      "settings": "Settings"
+      "settings": "Profile"
     }
   },
   "Dashboard": {
-    "dashboard": {
-      "title": "Workspace"
-    },
     "admin": {
       "title": "Admin",
       "users": {
